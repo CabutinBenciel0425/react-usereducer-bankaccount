@@ -9,6 +9,7 @@ const initialState = {
 };
 
 function reducer(state, action) {
+  if (!state.isActive) return state;
   switch (action.type) {
     case "open":
       return {
